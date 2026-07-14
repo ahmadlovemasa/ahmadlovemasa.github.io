@@ -2,30 +2,37 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>For Masa ♥</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600&display=swap" rel="stylesheet">
+    <title>Our Journey | A ♥ M</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        body { background: #f2e9e4; color: #5a4b44; font-family: 'Cairo', sans-serif; margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+        :root { --bg: #f5f0ed; --text: #4a403a; --accent: #b8a69d; }
+        body { background: var(--bg); color: var(--text); font-family: 'Cairo', sans-serif; margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+
+        /* نافيغاشن بار فخم */
+        nav { display: flex; gap: 40px; margin-top: 50px; font-size: 0.9rem; letter-spacing: 2px; color: #8a7e78; }
         
-        /* القائمة العلوية */
-        nav { display: flex; gap: 30px; margin-top: 30px; color: #8a7a72; font-size: 1.1rem; }
+        /* القسم الرئيسي - توزيع أسطوري */
+        #hero { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; width: 100%; transition: 1s ease; }
+        .heart-icon { font-size: 6rem; color: #d1c4bd; margin-bottom: 30px; }
         
-        /* القسم الرئيسي */
-        #hero { text-align: center; margin-top: 50px; width: 100%; transition: 0.5s; }
-        .logo-box { font-size: 10rem; color: #c9b7ac; margin-bottom: 20px; }
-        .main-wrapper { display: flex; justify-content: center; gap: 80px; align-items: center; margin-top: 20px; }
+        .main-grid { display: flex; gap: 100px; align-items: center; margin: 40px 0; }
         
-        /* العداد */
-        .counter-box { background: #5a4b44; color: #fff; padding: 15px 25px; border-radius: 10px; font-size: 1.5rem; letter-spacing: 5px; margin: 10px 0; }
-        
-        /* الزر */
-        .btn-start { background: #8a7a72; color: #fff; padding: 15px 60px; border-radius: 50px; border: none; font-size: 1.2rem; margin-top: 40px; cursor: pointer; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        
-        /* القصة (Timeline) */
-        #story { display: none; width: 90%; max-width: 600px; padding: 50px 0; animation: fadeIn 1s; }
-        .card { background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; margin-bottom: 20px; border: 1px solid #e8ddd5; }
-        .date { color: #8a7a72; font-weight: bold; margin-bottom: 5px; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        /* العداد الفخم */
+        .counter-wrapper { text-align: center; }
+        .counter-box { background: #4a403a; color: #f5f0ed; padding: 25px 40px; border-radius: 20px; font-size: 2rem; letter-spacing: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+
+        /* الاسم والرسالة */
+        .name-wrapper { text-align: center; font-family: 'Playfair Display', serif; }
+        .name-wrapper h1 { font-size: 4rem; margin: 0; }
+
+        /* زر الدخول */
+        .btn-start { background: transparent; border: 1px solid var(--text); padding: 15px 50px; border-radius: 50px; cursor: pointer; font-size: 1.1rem; letter-spacing: 3px; transition: 0.5s; }
+        .btn-start:hover { background: var(--text); color: white; }
+
+        /* القصة - ستايل احترافي */
+        #story { display: none; width: 90%; max-width: 600px; padding: 100px 0; animation: fadeUp 1s ease; }
+        .memory { border-right: 2px solid #d1c4bd; padding-right: 30px; margin-bottom: 60px; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; } }
     </style>
 </head>
 <body>
@@ -35,27 +42,30 @@
 </nav>
 
 <div id="hero">
-    <div class="logo-box">♡</div>
-    <div class="main-wrapper">
-        <div style="text-align: right;">
+    <div class="heart-icon">♡</div>
+    <div class="main-grid">
+        <div class="counter-wrapper">
+            <p>Time Since We Met</p>
+            <div class="counter-box">13 / 10 / 2025</div>
+            <p>the best in my life and forever</p>
+        </div>
+        <div class="name-wrapper">
             <h1>masa</h1>
             <p>lovvvvvvvveee u forever ♥ habibtiii</p>
-        </div>
-        <div style="text-align: center;">
-            <p>Time Since We Met</p>
-            <div class="counter-box">2025 / 10 / 13</div>
-            <p>the best in my life and forever</p>
         </div>
     </div>
     <button class="btn-start" onclick="showStory()">Start Our Adventure</button>
 </div>
 
 <div id="story">
-    <h2 style="text-align: center;">محطات رحلتنا</h2>
-    <div class="card"><div class="date">13/10/2025</div><h3>بداية الحكاية</h3><p>بدأت من هنا أجمل صدفة في حياتي.</p></div>
-    <div class="card"><div class="date">30/11/2025</div><h3>لقاء الروح</h3><p>أول لقاء بعد ست سنوات.. لم أستطع إخراج صورتك من عقلي.</p></div>
-    <div class="card"><div class="date">02/12/2025</div><h3>في رحابك</h3><p>أول مرة نجلس معاً في جامعتك..</p></div>
-    <div class="card"><div class="date">04/12/2025</div><h3>لحظة الإعتراف</h3><p>قلت لكِ أحبك بصدق العالم.</p></div>
+    <div class="memory">
+        <h3>13/10/2025 - بداية الحكاية</h3>
+        <p>هنا التقت أرواحنا، وبدأت أجمل رحلة في حياتي.</p>
+    </div>
+    <div class="memory">
+        <h3>30/11/2025 - لقاء الروح</h3>
+        <p>ست سنوات من الانتظار تلاشت في لحظة رؤيتك.</p>
+    </div>
 </div>
 
 <script>
