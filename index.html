@@ -2,53 +2,66 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Our Journey ♥</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
+    <title>For My Love ♥</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #fcfaf8; color: #3d3530; font-family: 'Cairo', sans-serif; margin: 0; padding: 0; }
+        body { 
+            background: linear-gradient(135deg, #f4ece7 0%, #e6d8cf 100%); 
+            color: #5c4e46; 
+            font-family: 'Cairo', sans-serif; 
+            margin: 0; min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
         
-        /* قسم الترحيب */
-        #welcome-section { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-        .heart-logo { font-size: 5rem; color: #b5a59a; margin-bottom: 20px; }
-        .btn-start { background: #8a7a72; color: white; padding: 15px 40px; border-radius: 50px; cursor: pointer; border: none; font-size: 1.2rem; transition: 0.3s; margin-top: 30px; }
-        .btn-start:hover { transform: scale(1.05); }
+        /* القسم الأول: واجهة الترحيب */
+        #welcome { text-align: center; width: 100%; transition: 0.5s; }
+        .heart-shape { font-size: 8rem; color: #a69890; margin-bottom: 10px; opacity: 0.8; }
+        h1 { font-size: 2.5rem; margin: 0; }
+        .sub { font-size: 1.2rem; color: #8a7a72; margin-bottom: 30px; }
+        .btn-start { 
+            background: #7a6a62; color: #fff; padding: 15px 50px; 
+            border-radius: 40px; border: none; cursor: pointer; font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s;
+        }
+        .btn-start:hover { transform: scale(1.05); background: #5c4e46; }
 
-        /* قسم القصة (مخفي مبدئياً) */
-        #story-section { display: none; padding: 60px 20px; max-width: 500px; margin: auto; }
-        .timeline-item { border-right: 1px solid #dcd4cf; padding-right: 25px; margin-bottom: 50px; position: relative; }
+        /* القسم الثاني: القصة (مخفي) */
+        #story { display: none; width: 90%; max-width: 500px; padding: 40px 0; }
+        .card { 
+            background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px); 
+            padding: 25px; border-radius: 20px; margin-bottom: 20px; 
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+        .date { color: #8a7a72; font-weight: bold; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-<!-- واجهة الترحيب -->
-<section id="welcome-section">
-    <div class="heart-logo">A ♥ M</div>
+<div id="welcome">
+    <div class="heart-shape">A ♥ M</div>
     <h1>masa</h1>
-    <p>lovvvvvvvveee u forever ♥ habibtiii</p>
+    <p class="sub">lovvvvvvvveee u forever ♥ habibtiii</p>
     <button class="btn-start" onclick="showStory()">Start Our Adventure</button>
-</section>
+</div>
 
-<!-- واجهة القصة -->
-<section id="story-section">
-    <h2 style="text-align: center;">قصتنا</h2>
-    <div class="timeline-item">
-        <div class="date" style="color:#b5a59a">13/10/2025</div>
-        <div class="title" style="font-weight:600">بداية الحكاية</div>
+<div id="story">
+    <div class="card">
+        <div class="date">13/10/2025</div>
+        <h3>بداية الحكاية</h3>
         <p>بدأت من هنا أجمل صدفة في حياتي.</p>
     </div>
-    <div class="timeline-item">
-        <div class="date" style="color:#b5a59a">30/11/2025</div>
-        <div class="title" style="font-weight:600">لقاء الروح</div>
+    <div class="card">
+        <div class="date">30/11/2025</div>
+        <h3>لقاء الروح</h3>
         <p>أول لقاء بعد ست سنوات.. لم أستطع إخراج صورتك من عقلي.</p>
     </div>
-    <!-- أضف باقي التواريخ بنفس طريقة الـ timeline-item أعلاه -->
-</section>
+    <!-- انسخ كود الـ card هنا لكل الذكريات المتبقية -->
+</div>
 
 <script>
     function showStory() {
-        document.getElementById('welcome-section').style.display = 'none';
-        document.getElementById('story-section').style.display = 'block';
-        window.scrollTo(0, 0);
+        document.getElementById('welcome').style.display = 'none';
+        document.getElementById('story').style.display = 'block';
     }
 </script>
 </body>
