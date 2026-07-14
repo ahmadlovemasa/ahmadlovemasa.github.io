@@ -2,66 +2,105 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>For My Love ♥</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&display=swap" rel="stylesheet">
+    <title>Our Journey | A ♥ M</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&display=swap" rel="stylesheet">
     <style>
         body { 
             background: linear-gradient(135deg, #f4ece7 0%, #e6d8cf 100%); 
             color: #5c4e46; 
             font-family: 'Cairo', sans-serif; 
             margin: 0; min-height: 100vh;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            display: flex; flex-direction: column; align-items: center;
         }
         
-        /* القسم الأول: واجهة الترحيب */
-        #welcome { text-align: center; width: 100%; transition: 0.5s; }
-        .heart-shape { font-size: 8rem; color: #a69890; margin-bottom: 10px; opacity: 0.8; }
-        h1 { font-size: 2.5rem; margin: 0; }
-        .sub { font-size: 1.2rem; color: #8a7a72; margin-bottom: 30px; }
+        /* تصميم واجهة الترحيب (نفس الصورة) */
+        #welcome { 
+            text-align: center; width: 100%; height: 100vh; 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            transition: 0.8s;
+        }
+        .heart-logo { font-size: 7rem; color: #a69890; margin-bottom: 10px; font-weight: 200; }
+        h1 { font-size: 3rem; margin: 0; }
+        .sub { font-size: 1.3rem; color: #8a7a72; margin-bottom: 40px; }
+        
         .btn-start { 
-            background: #7a6a62; color: #fff; padding: 15px 50px; 
-            border-radius: 40px; border: none; cursor: pointer; font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s;
+            background: #7a6a62; color: #fff; padding: 18px 60px; 
+            border-radius: 50px; border: none; cursor: pointer; font-size: 1.2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15); transition: 0.4s;
         }
-        .btn-start:hover { transform: scale(1.05); background: #5c4e46; }
+        .btn-start:hover { transform: translateY(-5px); background: #5c4e46; }
 
-        /* القسم الثاني: القصة (مخفي) */
-        #story { display: none; width: 90%; max-width: 500px; padding: 40px 0; }
+        /* تصميم القصة (الأسطوري) */
+        #story { display: none; width: 90%; max-width: 600px; padding: 60px 0; animation: fadeIn 1s; }
         .card { 
-            background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px); 
-            padding: 25px; border-radius: 20px; margin-bottom: 20px; 
-            border: 1px solid rgba(255,255,255,0.6);
+            background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(15px); 
+            padding: 30px; border-radius: 25px; margin-bottom: 25px; 
+            border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 8px 32px rgba(0,0,0,0.05);
         }
-        .date { color: #8a7a72; font-weight: bold; font-size: 0.9rem; }
+        .date { color: #8a7a72; font-weight: bold; font-size: 0.95rem; margin-bottom: 5px; }
+        h3 { margin: 0 0 10px 0; font-size: 1.4rem; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; } }
     </style>
 </head>
 <body>
 
 <div id="welcome">
-    <div class="heart-shape">A ♥ M</div>
+    <div class="heart-logo">A ♥ M</div>
     <h1>masa</h1>
     <p class="sub">lovvvvvvvveee u forever ♥ habibtiii</p>
     <button class="btn-start" onclick="showStory()">Start Our Adventure</button>
 </div>
 
 <div id="story">
+    <h2 style="text-align: center; margin-bottom: 40px;">قصتنا</h2>
+    
     <div class="card">
         <div class="date">13/10/2025</div>
         <h3>بداية الحكاية</h3>
-        <p>بدأت من هنا أجمل صدفة في حياتي.</p>
+        <p>بدأت من هنا أجمل صدفة في حياتي، حين بدأت ملامح حكايتنا تتشكل.</p>
     </div>
     <div class="card">
         <div class="date">30/11/2025</div>
         <h3>لقاء الروح</h3>
-        <p>أول لقاء بعد ست سنوات.. لم أستطع إخراج صورتك من عقلي.</p>
+        <p>أول لقاء بعد ست سنوات.. لم أستطع إخراج صورتك من عقلي، كنتِ أجمل مما تخيلت.</p>
     </div>
-    <!-- انسخ كود الـ card هنا لكل الذكريات المتبقية -->
+    <div class="card">
+        <div class="date">02/12/2025</div>
+        <h3>في رحابك</h3>
+        <p>أول مرة نجلس معاً في جامعتك.. بدأت أشعر أن هذا المكان هو وطني.</p>
+    </div>
+    <div class="card">
+        <div class="date">04/12/2025</div>
+        <h3>الإعتراف</h3>
+        <p>في هذا اليوم، تحررت الكلمات من قلبي.. قلت لكِ (أحبك) بصدق العالم.</p>
+    </div>
+    <div class="card">
+        <div class="date">23/02/2026</div>
+        <h3>بداية جديدة</h3>
+        <p>أول لقاء في فصلنا الثاني.. كانت بداية لرحلة جديدة نكتبها سوياً.</p>
+    </div>
+    <div class="card">
+        <div class="date">20/03/2026</div>
+        <h3>عيدنا الأول</h3>
+        <p>أول عيد يجمعنا.. كانت البهجة مضاعفة لأنكِ بجانبي.</p>
+    </div>
+    <div class="card">
+        <div class="date">27/05/2026</div>
+        <h3>عيدنا الثاني</h3>
+        <p>عيدٌ آخر يثبت لي أن الأيام معكِ هي العيد الحقيقي.</p>
+    </div>
+    <div class="card">
+        <div class="date">17/06/2026</div>
+        <h3>آخر لقاء.. وبداية انتظار</h3>
+        <p>آخر لحظة التقت فيها عيوننا.. كانت كافية لأشتاق إليكِ حتى اللقاء القادم.</p>
+    </div>
 </div>
 
 <script>
     function showStory() {
         document.getElementById('welcome').style.display = 'none';
         document.getElementById('story').style.display = 'block';
+        window.scrollTo(0, 0);
     }
 </script>
 </body>
