@@ -2,61 +2,54 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Our Journey | Masa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&display=swap" rel="stylesheet">
+    <title>Our Journey ♥</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #f5f0eb; --card: rgba(255, 255, 255, 0.7); --text: #3d3530; }
-        body { 
-            background: radial-gradient(circle at top right, #e8dcd3, #f5f0eb);
-            color: var(--text); font-family: 'Cairo', sans-serif;
-            margin: 0; padding: 40px 20px; min-height: 100vh;
-        }
-        .container { max-width: 500px; margin: auto; }
-        .hero { text-align: center; margin-bottom: 80px; animation: fadeIn 2s; }
-        h1 { font-size: 3rem; font-weight: 200; letter-spacing: 5px; margin: 0; }
+        body { background-color: #fcfaf8; color: #3d3530; font-family: 'Cairo', sans-serif; margin: 0; padding: 0; }
         
-        .card {
-            background: var(--card); backdrop-filter: blur(15px);
-            padding: 30px; border-radius: 25px; margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease; border: 1px solid rgba(255,255,255,0.5);
-        }
-        .card:hover { transform: translateY(-10px); }
-        .date { font-size: 0.8rem; font-weight: 700; color: #a69890; margin-bottom: 10px; }
-        .title { font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; }
-        .desc { font-size: 0.95rem; line-height: 1.6; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        /* قسم الترحيب */
+        #welcome-section { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .heart-logo { font-size: 5rem; color: #b5a59a; margin-bottom: 20px; }
+        .btn-start { background: #8a7a72; color: white; padding: 15px 40px; border-radius: 50px; cursor: pointer; border: none; font-size: 1.2rem; transition: 0.3s; margin-top: 30px; }
+        .btn-start:hover { transform: scale(1.05); }
+
+        /* قسم القصة (مخفي مبدئياً) */
+        #story-section { display: none; padding: 60px 20px; max-width: 500px; margin: auto; }
+        .timeline-item { border-right: 1px solid #dcd4cf; padding-right: 25px; margin-bottom: 50px; position: relative; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="hero">
-        <h1>masa</h1>
-        <p>حكايتنا التي لا تنتهي ♥</p>
-    </div>
+<!-- واجهة الترحيب -->
+<section id="welcome-section">
+    <div class="heart-logo">A ♥ M</div>
+    <h1>masa</h1>
+    <p>lovvvvvvvveee u forever ♥ habibtiii</p>
+    <button class="btn-start" onclick="showStory()">Start Our Adventure</button>
+</section>
 
-    <!-- البطاقات -->
-    <div class="card">
-        <div class="date">13/10/2025</div>
-        <div class="title">بداية الحكاية</div>
-        <div class="desc">من هنا بدأت أجمل صدفة في حياتي.</div>
+<!-- واجهة القصة -->
+<section id="story-section">
+    <h2 style="text-align: center;">قصتنا</h2>
+    <div class="timeline-item">
+        <div class="date" style="color:#b5a59a">13/10/2025</div>
+        <div class="title" style="font-weight:600">بداية الحكاية</div>
+        <p>بدأت من هنا أجمل صدفة في حياتي.</p>
     </div>
-    
-    <div class="card">
-        <div class="date">30/11/2025</div>
-        <div class="title">لقاء الروح</div>
-        <div class="desc">أول لقاء بعد ست سنوات.. لم أستطع إخراج صورتك من عقلي.</div>
+    <div class="timeline-item">
+        <div class="date" style="color:#b5a59a">30/11/2025</div>
+        <div class="title" style="font-weight:600">لقاء الروح</div>
+        <p>أول لقاء بعد ست سنوات.. لم أستطع إخراج صورتك من عقلي.</p>
     </div>
+    <!-- أضف باقي التواريخ بنفس طريقة الـ timeline-item أعلاه -->
+</section>
 
-    <div class="card">
-        <div class="date">04/12/2025</div>
-        <div class="title">لحظة الإعتراف</div>
-        <div class="desc">تحررت الكلمات من قلبي.. قلت لكِ أحبك بصدق.</div>
-    </div>
-
-    <!-- يمكنك إضافة باقي البطاقات بنفس التنسيق -->
-</div>
-
+<script>
+    function showStory() {
+        document.getElementById('welcome-section').style.display = 'none';
+        document.getElementById('story-section').style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+</script>
 </body>
 </html>
