@@ -3,104 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <title>Our Journey | A ♥ M</title>
+    <!-- خطوط جوجل للفخامة -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&display=swap" rel="stylesheet">
     <style>
-        body { 
-            background: linear-gradient(135deg, #f4ece7 0%, #e6d8cf 100%); 
-            color: #5c4e46; 
-            font-family: 'Cairo', sans-serif; 
-            margin: 0; min-height: 100vh;
-            display: flex; flex-direction: column; align-items: center;
-        }
-        
-        /* تصميم واجهة الترحيب (نفس الصورة) */
-        #welcome { 
-            text-align: center; width: 100%; height: 100vh; 
-            display: flex; flex-direction: column; justify-content: center; align-items: center; 
-            transition: 0.8s;
-        }
-        .heart-logo { font-size: 7rem; color: #a69890; margin-bottom: 10px; font-weight: 200; }
-        h1 { font-size: 3rem; margin: 0; }
-        .sub { font-size: 1.3rem; color: #8a7a72; margin-bottom: 40px; }
-        
-        .btn-start { 
-            background: #7a6a62; color: #fff; padding: 18px 60px; 
-            border-radius: 50px; border: none; cursor: pointer; font-size: 1.2rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15); transition: 0.4s;
-        }
-        .btn-start:hover { transform: translateY(-5px); background: #5c4e46; }
+        :root { --bg: #f4ece7; --primary: #5c4e46; --glass: rgba(255, 255, 255, 0.3); }
+        * { box-sizing: border-box; transition: 0.3s ease; }
+        body { background: radial-gradient(circle, #fcfaf8, #e6d8cf); color: var(--primary); font-family: 'Cairo', sans-serif; margin: 0; min-height: 100vh; }
 
-        /* تصميم القصة (الأسطوري) */
-        #story { display: none; width: 90%; max-width: 600px; padding: 60px 0; animation: fadeIn 1s; }
-        .card { 
-            background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(15px); 
-            padding: 30px; border-radius: 25px; margin-bottom: 25px; 
-            border: 1px solid rgba(255,255,255,0.6); box-shadow: 0 8px 32px rgba(0,0,0,0.05);
-        }
-        .date { color: #8a7a72; font-weight: bold; font-size: 0.95rem; margin-bottom: 5px; }
-        h3 { margin: 0 0 10px 0; font-size: 1.4rem; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; } }
+        /* الشاشة الأولى: الترحيب */
+        #hero-section { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .logo-main { font-size: 8rem; color: #a69890; margin-bottom: 20px; animation: pulse 3s infinite; }
+        .hero-title { font-size: 3.5rem; font-weight: 200; }
+        .btn-adventure { padding: 20px 60px; background: var(--primary); color: white; border-radius: 50px; cursor: pointer; border: none; font-size: 1.2rem; margin-top: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .btn-adventure:hover { transform: scale(1.1); background: #7a6a62; }
+
+        /* أقسام القصة */
+        #main-content { display: none; padding: 100px 20px; max-width: 600px; margin: auto; }
+        .card { background: var(--glass); backdrop-filter: blur(15px); padding: 40px; border-radius: 30px; margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.5); }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .date { font-weight: 700; color: #8a7a72; margin-bottom: 10px; }
+        
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
     </style>
 </head>
 <body>
 
-<div id="welcome">
-    <div class="heart-logo">A ♥ M</div>
-    <h1>masa</h1>
-    <p class="sub">lovvvvvvvveee u forever ♥ habibtiii</p>
-    <button class="btn-start" onclick="showStory()">Start Our Adventure</button>
-</div>
+<!-- قسم الترحيب -->
+<section id="hero-section">
+    <div class="logo-main">A ♥ M</div>
+    <h1 class="hero-title">masa</h1>
+    <p>lovvvvvvvveee u forever ♥ habibtiii</p>
+    <button class="btn-adventure" onclick="startAdventure()">Start Our Adventure</button>
+</section>
 
-<div id="story">
-    <h2 style="text-align: center; margin-bottom: 40px;">قصتنا</h2>
+<!-- قسم القصة الكامل -->
+<main id="main-content">
+    <h2 style="text-align: center; margin-bottom: 60px;">محطات رحلتنا</h2>
     
     <div class="card">
         <div class="date">13/10/2025</div>
         <h3>بداية الحكاية</h3>
         <p>بدأت من هنا أجمل صدفة في حياتي، حين بدأت ملامح حكايتنا تتشكل.</p>
     </div>
+
     <div class="card">
         <div class="date">30/11/2025</div>
         <h3>لقاء الروح</h3>
         <p>أول لقاء بعد ست سنوات.. لم أستطع إخراج صورتك من عقلي، كنتِ أجمل مما تخيلت.</p>
     </div>
+
     <div class="card">
         <div class="date">02/12/2025</div>
         <h3>في رحابك</h3>
         <p>أول مرة نجلس معاً في جامعتك.. بدأت أشعر أن هذا المكان هو وطني.</p>
     </div>
+
     <div class="card">
         <div class="date">04/12/2025</div>
-        <h3>الإعتراف</h3>
-        <p>في هذا اليوم، تحررت الكلمات من قلبي.. قلت لكِ (أحبك) بصدق العالم.</p>
+        <h3>لحظة الإعتراف</h3>
+        <p>في هذا اليوم، تحررت الكلمات من قلبي.. قلت لكِ أحبك بصدق العالم.</p>
     </div>
+
     <div class="card">
         <div class="date">23/02/2026</div>
         <h3>بداية جديدة</h3>
         <p>أول لقاء في فصلنا الثاني.. كانت بداية لرحلة جديدة نكتبها سوياً.</p>
     </div>
+
     <div class="card">
         <div class="date">20/03/2026</div>
         <h3>عيدنا الأول</h3>
         <p>أول عيد يجمعنا.. كانت البهجة مضاعفة لأنكِ بجانبي.</p>
     </div>
+
     <div class="card">
         <div class="date">27/05/2026</div>
         <h3>عيدنا الثاني</h3>
         <p>عيدٌ آخر يثبت لي أن الأيام معكِ هي العيد الحقيقي.</p>
     </div>
+
     <div class="card">
         <div class="date">17/06/2026</div>
         <h3>آخر لقاء.. وبداية انتظار</h3>
         <p>آخر لحظة التقت فيها عيوننا.. كانت كافية لأشتاق إليكِ حتى اللقاء القادم.</p>
     </div>
-</div>
+</main>
 
 <script>
-    function showStory() {
-        document.getElementById('welcome').style.display = 'none';
-        document.getElementById('story').style.display = 'block';
-        window.scrollTo(0, 0);
+    function startAdventure() {
+        document.getElementById('hero-section').style.opacity = "0";
+        setTimeout(() => {
+            document.getElementById('hero-section').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }, 500);
     }
 </script>
 </body>
