@@ -2,22 +2,27 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Our Journey | A ♥ M</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>A ♥ M</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #f5f0ed; --text: #4a403a; --accent: #b8a69d; }
+        :root { --bg: #f5f0ed; --text: #4a403a; }
         body { background: var(--bg); color: var(--text); font-family: 'Cairo', sans-serif; margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
-        nav { display: flex; gap: 40px; margin-top: 50px; font-size: 0.9rem; letter-spacing: 2px; color: #8a7e78; }
         
-        #hero { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; width: 100%; transition: 1s ease; }
+        /* Header الفخم */
+        header { margin-top: 50px; text-align: center; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 5rem; margin: 0; letter-spacing: 5px; }
+
+        /* Hero Section */
+        #hero { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 70vh; width: 100%; transition: 1s ease; }
         .heart-icon { font-size: 6rem; color: #d1c4bd; margin-bottom: 30px; }
         .main-grid { display: flex; gap: 100px; align-items: center; margin: 40px 0; }
         .counter-box { background: #4a403a; color: #f5f0ed; padding: 25px 40px; border-radius: 20px; font-size: 2rem; letter-spacing: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
         .name-wrapper { text-align: center; font-family: 'Playfair Display', serif; }
-        .name-wrapper h1 { font-size: 4rem; margin: 0; }
+        .name-wrapper h2 { font-size: 4rem; margin: 0; }
         .btn-start { background: transparent; border: 1px solid var(--text); padding: 15px 50px; border-radius: 50px; cursor: pointer; font-size: 1.1rem; letter-spacing: 3px; transition: 0.5s; }
         .btn-start:hover { background: var(--text); color: white; }
 
+        /* Story Section */
         #story { display: none; width: 90%; max-width: 600px; padding: 100px 0; animation: fadeUp 1s ease; }
         .memory { border-right: 2px solid #d1c4bd; padding-right: 30px; margin-bottom: 60px; }
         @keyframes fadeUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; } }
@@ -25,9 +30,9 @@
 </head>
 <body>
 
-<nav>
-    <div>Our Story</div><div>Gallery</div><div>Messages</div><div>Timeline</div><div>A ♥ M</div>
-</nav>
+<header>
+    <h1>A ♥ M</h1>
+</header>
 
 <div id="hero">
     <div class="heart-icon">♡</div>
@@ -38,7 +43,7 @@
             <p>the best in my life and forever</p>
         </div>
         <div class="name-wrapper">
-            <h1>masa</h1>
+            <h2>masa</h2>
             <p>lovvvvvvvveee u forever ♥ habibtiii</p>
         </div>
     </div>
@@ -48,10 +53,10 @@
 <div id="story">
     <div class="memory"><h3>13/10/2025 - بداية الحكاية</h3><p>احلى يوم بكل حياتي لانها كانت اول مرة فيها مع حبيبة عمري من ست سنين كاملة.</p></div>
     <div class="memory"><h3>30/11/2025 - لقاء الروح</h3><p>ثاني احلى ايام عمري لاني كنت اول مرة بشوفك فيها من ست سنين كاملة و من وقتها ما قدرت اطلعك من بالي لاموت لانك احلى بنت شافتها عيني .</p></div>
-    <div class="memory"><h3>02/12/2025 - في رحابك</h3><p>هون كانت اول مرة بفوت فيها اليرموك معك و من وقتها صرت احب هاي الجامعة لانك انتي فيها  بس.</p></div>
-    <div class="memory"><h3>04/12/2025 - لحظة الإعتراف</h3><p>هون كانت اول مرة بحكيلك فيها بحبك صح انه ممكن تعتبريها بالنسبة الك يوم زفت لانه من بعدها بطل اي اشي زي اول بس انا بعتبره من احلى اييام عمري كلها.</p></div>
-    <div class="memory"><h3>23/02/2026 - بداية جديدة</h3><p>أول مرة بشوفك فيها بعد 3 شهور و كانت اول يوم بالفصل الثاني و بتذكر هاد اليوم بكل تفاصيله لانه وقتها مسموستي كانت كثير بتجنن.</p></div>
-    <div class="memory"><h3>20/03/2026 - عيدنا الأول</h3><p>أول عيد الي معك كان الو طعم ثاني لانه اول عيد معك و احلى عيد بكل عمري كان.</p></div>
+    <div class="memory"><h3>02/12/2025 - في رحابك</h3><p>هون كانت اول مرة بفوت فيها اليرموك معك و من وقتها صرت احب هاي الجامعة لانك انتي فيها بس.</p></div>
+    <div class="memory"><h3>04/12/2025 - لحظة الإعتراف</h3><p>هون كان اول مره بحكيك فيها بحبك صح الله فمحل لعزيزها بالنسبه الك يوم رقت لانه من بعدها بطل اي اشي زي اول بس انا بعتبره من احلى ايام عمري كلها.</p></div>
+    <div class="memory"><h3>23/02/2026 - بداية جديدة</h3><p>اول مرة بشوفك فيها بعد 3 شهور و كانت اول يوم بالفصل الثاني و بتذكر هاد اليوم بكل تفاصيله لانه وقتها مسموستي كانت كثير بتجنن.</p></div>
+    <div class="memory"><h3>20/03/2026 - عيدنا الأول</h3><p>اول عيد الي معك كان الو طعم ثاني لانه اول عيد معك و احلى عيد بكل عمري كان.</p></div>
     <div class="memory"><h3>27/05/2026 - عيدنا الثاني</h3><p>عيد ثاني معك بثبتلي انك احلى اشي صار بكل حياتي يا نور عيوني و حبيبة روحي انتي.</p></div>
     <div class="memory"><h3>17/06/2026 - آخر لقاء</h3><p>آخر مرة شفتك فيها و ان شاء الله ما رح تكون اخر مرة يا روح احمد انتي.</p></div>
 </div>
