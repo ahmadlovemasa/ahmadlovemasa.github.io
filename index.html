@@ -2,99 +2,60 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Masa ♥</title>
+    <title>Our Journey | Masa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700&display=swap" rel="stylesheet">
     <style>
-        /* التصميم الهادئ والمرتب */
-        body {
-            background-color: #FDF6F0;
-            color: #4A3728;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+        :root { --bg: #f5f0eb; --card: rgba(255, 255, 255, 0.7); --text: #3d3530; }
+        body { 
+            background: radial-gradient(circle at top right, #e8dcd3, #f5f0eb);
+            color: var(--text); font-family: 'Cairo', sans-serif;
+            margin: 0; padding: 40px 20px; min-height: 100vh;
         }
-        .container {
-            max-width: 600px;
-            width: 100%;
-            padding: 60px 20px;
+        .container { max-width: 500px; margin: auto; }
+        .hero { text-align: center; margin-bottom: 80px; animation: fadeIn 2s; }
+        h1 { font-size: 3rem; font-weight: 200; letter-spacing: 5px; margin: 0; }
+        
+        .card {
+            background: var(--card); backdrop-filter: blur(15px);
+            padding: 30px; border-radius: 25px; margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease; border: 1px solid rgba(255,255,255,0.5);
         }
-        .header { text-align: center; margin-bottom: 60px; }
-        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #2C241E; }
-        .timeline-item {
-            border-right: 2px solid #D1C5B5;
-            padding-right: 25px;
-            margin-bottom: 45px;
-            position: relative;
-        }
-        /* نقطة صغيرة أنيقة للخط الزمني */
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            right: -7px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background-color: #D1C5B5;
-            border-radius: 50%;
-        }
-        .date { font-weight: bold; font-size: 0.95em; color: #8C7866; }
-        .event-title { font-size: 1.3rem; font-weight: bold; margin: 5px 0; }
-        .event-desc { font-size: 1.05em; color: #5D4F44; }
+        .card:hover { transform: translateY(-10px); }
+        .date { font-size: 0.8rem; font-weight: 700; color: #a69890; margin-bottom: 10px; }
+        .title { font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; }
+        .desc { font-size: 0.95rem; line-height: 1.6; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header">
+    <div class="hero">
         <h1>masa</h1>
-        <p>lovvvvvvvveee u forever ♥ habibtiii</p>
+        <p>حكايتنا التي لا تنتهي ♥</p>
     </div>
 
-    <div id="timeline">
-        <div class="timeline-item">
-            <div class="date">13/10/2025</div>
-            <div class="event-title">بداية الحكاية</div>
-            <p class="event-desc">بدأت من هنا أجمل صدفة في حياتي، حين بدأت ملامح حكايتنا تتشكل.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">30/11/2025</div>
-            <div class="event-title">لقاء الروح</div>
-            <p class="event-desc">أول لقاء بعد ست سنوات.. لم أستطع إخراج صورتك من عقلي، كنتِ أجمل مما تخيلت.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">02/12/2025</div>
-            <div class="event-title">في رحابك</div>
-            <p class="event-desc">أول مرة نجلس معاً في جامعتك.. بدأت أشعر أن هذا المكان هو وطني.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">04/12/2025</div>
-            <div class="event-title">الإعتراف</div>
-            <p class="event-desc">في هذا اليوم، تحررت الكلمات من قلبي.. قلت لكِ (أحبك) بصدق العالم.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">23/02/2026</div>
-            <div class="event-title">بداية جديدة</div>
-            <p class="event-desc">أول لقاء في فصلنا الثاني.. كانت بداية لرحلة جديدة نكتبها سوياً.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">20/03/2026</div>
-            <div class="event-title">عيدنا الأول</div>
-            <p class="event-desc">أول عيد يجمعنا.. كانت البهجة مضاعفة لأنكِ بجانبي.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">27/05/2026</div>
-            <div class="event-title">عيدنا الثاني</div>
-            <p class="event-desc">عيدٌ آخر يثبت لي أن الأيام معكِ هي العيد الحقيقي.</p>
-        </div>
-        <div class="timeline-item">
-            <div class="date">17/06/2026</div>
-            <div class="event-title">آخر لقاء.. وبداية انتظار</div>
-            <p class="event-desc">آخر لحظة التقت فيها عيوننا.. كانت كافية لأشتاق إليكِ حتى اللقاء القادم.</p>
-        </div>
+    <!-- البطاقات -->
+    <div class="card">
+        <div class="date">13/10/2025</div>
+        <div class="title">بداية الحكاية</div>
+        <div class="desc">من هنا بدأت أجمل صدفة في حياتي.</div>
     </div>
+    
+    <div class="card">
+        <div class="date">30/11/2025</div>
+        <div class="title">لقاء الروح</div>
+        <div class="desc">أول لقاء بعد ست سنوات.. لم أستطع إخراج صورتك من عقلي.</div>
+    </div>
+
+    <div class="card">
+        <div class="date">04/12/2025</div>
+        <div class="title">لحظة الإعتراف</div>
+        <div class="desc">تحررت الكلمات من قلبي.. قلت لكِ أحبك بصدق.</div>
+    </div>
+
+    <!-- يمكنك إضافة باقي البطاقات بنفس التنسيق -->
 </div>
 
 </body>
